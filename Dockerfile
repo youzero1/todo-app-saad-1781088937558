@@ -1,10 +1,10 @@
 # Stage 1: Build
 FROM node:20-alpine AS builder
 WORKDIR /app
-COPY package.json ./
-RUN npm install --legacy-peer-deps
+COPY package.json package-lock.json ./
+RUN npm ci --legacy-peer-deps
 COPY . .
-RUN npx vite build --logLevel info
+RUN npm run build
 
 # Stage 2: Serve
 FROM nginx:alpine
