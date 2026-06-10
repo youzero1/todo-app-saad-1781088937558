@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build --logLevel info",
+    "build": "tsc -p tsconfig.app.json --noEmit && vite build --logLevel info",
     "preview": "vite preview",
     "lint": "eslint ."
   },
