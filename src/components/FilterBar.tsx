@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { Trash2 } from 'lucide-react';
-import { FilterType } from '@/types';
+import { FilterType } from '../types';
 
 type FilterBarProps = {
   filter: FilterType;

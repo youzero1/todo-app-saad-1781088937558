@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Plus } from 'lucide-react';
 import clsx from 'clsx';
-import { Priority } from '@/types';
+import { Priority } from '../types';
 
 type AddTodoFormProps = {
   onAdd: (text: string, priority: Priority) => void;

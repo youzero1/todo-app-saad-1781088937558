@@ -1,8 +1,8 @@
-import { useTodos } from '@/hooks/useTodos';
-import AddTodoForm from '@/components/AddTodoForm';
-import TodoList from '@/components/TodoList';
-import FilterBar from '@/components/FilterBar';
-import StatsBar from '@/components/StatsBar';
+import { useTodos } from './hooks/useTodos';
+import AddTodoForm from './components/AddTodoForm';
+import TodoList from './components/TodoList';
+import FilterBar from './components/FilterBar';
+import StatsBar from './components/StatsBar';
 
 export default function TodoPage() {
   const {

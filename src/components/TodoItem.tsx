@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Pencil, Trash2, Check, X } from 'lucide-react';
 import clsx from 'clsx';
-import { Todo } from '@/types';
+import { Todo } from '../types';
 
 type TodoItemProps = {
   todo: Todo;
@@ -14,12 +14,6 @@ const PRIORITY_BADGE: Record<string, string> = {
   low: 'bg-emerald-100 text-emerald-700',
   medium: 'bg-amber-100 text-amber-700',
   high: 'bg-rose-100 text-rose-700',
-};
-
-const PRIORITY_BAR: Record<string, string> = {
-  low: 'bg-emerald-400',
-  medium: 'bg-amber-400',
-  high: 'bg-rose-400',
 };
 
 export default function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemProps) {
@@ -53,10 +47,7 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemP
     <li
       className={clsx(
         'group flex items-center gap-3 bg-white rounded-2xl shadow px-4 py-3 transition-all duration-200 border-l-4',
-        todo.completed ? 'opacity-60' : 'opacity-100',
-        PRIORITY_BAR[todo.priority]
-          ? `border-l-4`
-          : 'border-transparent'
+        todo.completed ? 'opacity-60' : 'opacity-100'
       )}
       style={{ borderLeftColor: todo.priority === 'high' ? '#f87171' : todo.priority === 'medium' ? '#fbbf24' : '#34d399' }}
     >
